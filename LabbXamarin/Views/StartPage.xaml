@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LabbXamarin.Views.StartPage"
+             xmlns:vm="clr-namespace:LabbXamarin.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel/>
+    </ContentPage.BindingContext>
+
+    
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+    
+        
+        <StackLayout>
+            <StackLayout Padding="-1,1,-1,-1">
+                <ContentView>
+                    <Frame BorderColor="{StaticResource Accent}" 
+                           BackgroundColor="{StaticResource Primary}"
+                           >
+                        <Image Source="brawlhallaLogo.jpg" 
+                           VerticalOptions="Center">
+                        </Image>
+                    </Frame>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1" BackgroundColor="{StaticResource Background}">
+            <StackLayout>
+                <Label Text="Welcome to the Brawlhall app" 
+                       FontSize="Title"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{StaticResource Accent}"
+                       TextDecorations="Underline"></Label>
+                <Label Text="Follow the link to our website for latest news" 
+                       HorizontalTextAlignment="Center"
+                       Margin="0,10,0,0"
+                       FontSize="18"
+                       TextColor="{StaticResource Accent}"></Label>
+
+                <Button Margin="50,20,50,0" Text="Go to website"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        BorderWidth="1"
+                        BorderColor="{StaticResource Accent}"
+                        TextColor="White"></Button>
+            </StackLayout>
+        </ScrollView>
+        <ScrollView Grid.Row="2">
+            <StackLayout>
+                <Frame>
+                    <Image Source="WebBanner1v1map.png" VerticalOptions="Center"></Image>
+                </Frame>
+                <Label Text="hej"></Label>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

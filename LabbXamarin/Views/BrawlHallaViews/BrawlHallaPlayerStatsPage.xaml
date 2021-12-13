@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:LabbXamarin.ViewModels"
+             x:Class="LabbXamarin.Views.BrawlHallaViews.BrawlHallaPlayerStatsPage"
+             x:DataType="vm:BrawHallaPlayerStatsViewModel">
+
+
+    <ContentPage.BindingContext>
+        <vm:BrawHallaPlayerStatsViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout>
+                
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Frame>
+                    <Entry 
+                   x:Name="brawlHallaId_entry"
+                   BackgroundColor="#2c3e50"
+                   Placeholder="brawlhalla id"
+                   TextColor="White"
+                   Keyboard="Numeric"
+                   Completed="brawlHallaId_entry_CompletedAsync"
+                   PlaceholderColor="Wheat"></Entry>
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="{StaticResource Background}"></ActivityIndicator>
+                <Label Text="{Binding player.name}"></Label>
+                <Label Text="{Binding player.brawlhalla_id}"></Label>
+                <Label Text="{Binding player.games}"></Label>
+                <Label Text="{Binding player.wins}"></Label>
+                <Label Text="{Binding player.winRatio}"></Label>
+                <Label Text="{Binding player.level}"></Label>
+                <Label Text="{Binding player.xp_percentage}"></Label>
+                <Button x:Name="openModalLegends" Text="show legends" Clicked="openModalLegends_Clicked"></Button>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

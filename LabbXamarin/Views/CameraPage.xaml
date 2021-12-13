@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LabbXamarin.Views.CameraPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#243640">
+            <Frame
+                BackgroundColor="#1E2D2F"
+                Padding="24"
+                CornerRadius="0">
+                <Label Text="MediaPicker"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       FontSize="30"></Label>
+            </Frame>
+
+
+            <Button Text="Pick image" 
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#86615C"
+                    />
+            <Button Text="Take photo"
+                    Clicked="Take_Photo_Clicked"
+                    BackgroundColor="#86615C"/>
+
+                <StackLayout>
+                    <Image x:Name="resultImage"
+                       HeightRequest="300"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

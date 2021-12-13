@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LabbXamarin.Views.BrawlHallaViews.BrawlHallaMainPage"
+             Title="{Binding Title}">
+
+
+
+    <Grid BackgroundColor="{StaticResource Background}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackLayout BackgroundColor="{StaticResource TopBar}"
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="Fill">
+            <ContentView Padding="0,20,0,20"
+                         VerticalOptions="FillAndExpand">
+                <Image Source="brawlStatsLogo.png"></Image>
+            </ContentView>
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical"
+                             Padding="30,24,30,24" 
+                             Spacing="10">
+                <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Center">
+                    <Button BorderWidth="1"
+                                Margin="0,20,20,20"
+                                Text="Top 50"
+                                x:Name="btnTop50"
+                                CornerRadius="10"
+                                TextColor="White"
+                                WidthRequest="170"
+                                HeightRequest="130"
+                                BackgroundColor="{StaticResource Primary}"
+                                Opacity="0.7"
+                                Routing.Route="BrawHallaTopFiftyPage"
+                                Clicked="btnTop50_Clicked"
+                                BorderColor="{StaticResource Accent}"
+                            
+                            ></Button>
+                    <Button BorderWidth="1"
+                                Margin="0,20,0,20"
+                                Text="Legends"
+                                FontFamily="'Nunito', sans-serif"
+                                x:Name="btnLegends"
+                                CornerRadius="10"
+                                TextColor="White"
+                                WidthRequest="170"
+                                HeightRequest="130"
+                                BackgroundColor="{StaticResource Primary}"
+                                Opacity="0.7"
+                                Routing.Route="BrawlHallaLegendsPage"
+                                Clicked="btnLegends_Clicked"
+                                BorderColor="{StaticResource Accent}"
+                            ></Button>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Center">
+                    <Button BorderWidth="1"
+                                Margin="0,0,0,20"
+                                Text="Player stats"
+                                x:Name="btnPlayerStats"
+                                CornerRadius="10"
+                                TextColor="White"
+                                WidthRequest="170"
+                                HeightRequest="130"
+                                BackgroundColor="{StaticResource Primary}"
+                                Opacity="0.7"
+                                Clicked="btnPlayerStats_Clicked"
+                                BorderColor="{StaticResource Accent}"
+                            ></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

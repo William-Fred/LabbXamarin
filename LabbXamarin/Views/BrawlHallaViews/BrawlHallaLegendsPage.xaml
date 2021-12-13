@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:LabbXamarin.ViewModels"
+             x:Class="LabbXamarin.Views.BrawlHallaViews.BrawlHallaLegendsPage"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:BrawlHallaLegendsViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <ListView ItemsSource="{Binding legendsList}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding bio_name}"></Label>
+                                    <Label Text="{Binding bio_aka}"></Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

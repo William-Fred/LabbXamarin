@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:LabbXamarin.ViewModels"
+             x:Class="LabbXamarin.Views.BrawlHallaViews.BrawlHallaTopFiftyPage">
+
+    <ContentPage.BindingContext>
+        <vm:BrawlHallaTopFiftyViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="frame1">#F1ECCE</Color>
+            <Color x:Key="frame2">#1E2D2F</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid BackgroundColor="{StaticResource TopBar}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+            <StackLayout></StackLayout>
+        <StackLayout>
+                <ListView ItemsSource="{Binding brawlList}" HasUnevenRows="False" Margin="40,20,20,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="LightGray"
+                                   HasShadow="True" 
+                                   HeightRequest="100" 
+                                   Margin="0">          
+                                    <Frame.Background>
+                                        <!-- StartPoint defaults to (0,0) -->
+                                        <LinearGradientBrush EndPoint="1,0">
+                                            <GradientStop Color="{StaticResource frame2}"
+                                                Offset="1.0" />
+                                            <GradientStop Color="{StaticResource frame1}"
+                                                 Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </Frame.Background>
+                                <StackLayout>
+                                    <Label Text="{Binding BrawlhallaId}" TextColor="{StaticResource frame1}"></Label>
+                                    
+                                </StackLayout>
+                                </Frame>
+
+                           
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

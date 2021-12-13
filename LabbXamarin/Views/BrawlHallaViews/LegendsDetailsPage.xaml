@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LabbXamarin.Views.BrawlHallaViews.LegendsDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="name" Text="{Binding legend_name_key}"></Label>
+            <Label x:Name="wins" Text="{Binding wins}"></Label>
+            <Label x:Name="games" Text="{Binding wins}"></Label>
+            <Label x:Name="damageDealt" Text="{Binding damagedealt}"></Label>
+            <Label x:Name="damageTaken" Text="{Binding damagetaken}"></Label>
+            <Label x:Name="kos" Text="{Binding kos}"></Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
