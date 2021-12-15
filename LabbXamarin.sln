@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabbXamarin.Android", "Labb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabbXamarin.iOS", "LabbXamarin.iOS\LabbXamarin.iOS.csproj", "{5CC7D53F-6D69-47DD-B64F-CCD42170CE73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabbXamarin", "LabbXamarin\LabbXamarin.csproj", "{41E43EFA-2888-414E-9DE2-E1493D73AE27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabbXamarin", "LabbXamarin\LabbXamarin.csproj", "{41E43EFA-2888-414E-9DE2-E1493D73AE27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

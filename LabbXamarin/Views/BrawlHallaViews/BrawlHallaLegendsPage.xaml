@@ -9,23 +9,45 @@
         <vm:BrawlHallaLegendsViewModel />
     </ContentPage.BindingContext>
 
+    <Grid BackgroundColor="{StaticResource Background}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
 
-    <ContentPage.Content>
-        <StackLayout>
+
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="Fill">
+            <ContentView VerticalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="{StaticResource Primary}" WidthRequest="200">
+                    <Image Source="legendsLogoX.png"
+                           HeightRequest="175"></Image>
+                </StackLayout>
+            </ContentView>
+        </StackLayout>
+
+
+        <StackLayout Grid.Row="1">
             <StackLayout>
-                <ListView ItemsSource="{Binding legendsList}">
+                <ListView ItemsSource="{Binding legendsList}"
+                          RowHeight="80"
+                          >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout>
-                                    <Label Text="{Binding bio_name}"></Label>
-                                    <Label Text="{Binding bio_aka}"></Label>
+                                <Frame BackgroundColor="{StaticResource Background}"
+                                       BorderColor="{StaticResource Primary}"
+                                       Margin="2">
+                                    <StackLayout>
+                                    <Label FontSize="18" TextColor="{StaticResource Accent}" Text="{Binding bio_name}"></Label>
+                                    <Label FontSize="14" TextColor="#fff" Text="{Binding bio_aka}" FontAttributes="Italic"></Label>
                                 </StackLayout>
+                                </Frame>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

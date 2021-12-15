@@ -19,12 +19,12 @@
                 <!--<Setter Property="Shell.ForegroundColor" Value="Wc:\users\willi\source\repos\labbxamarin\labbxamarin\appshell.xaml.cs
 c:\users\willi\source\repos\labbxamarin\labbxamarin\appshell.xaml
 hite" />-->
-                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="#fff" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#bec2c1"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
@@ -33,8 +33,8 @@ hite" />-->
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Home" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:StartPage}" />
-        <ShellContent Title="Camera" Icon="cameraIcon.png" Route="CameraPage" ContentTemplate="{DataTemplate local:CameraPage}" />
+        <ShellContent Title="Home" Icon="home.png" ContentTemplate="{DataTemplate local:StartPage}" />
+        <ShellContent Title="Camera" Icon="cameraicon.png" Route="CameraPage" ContentTemplate="{DataTemplate local:CameraPage}" />
         <ShellContent Title="Stats" Icon="apiIcon.png" Route="BrawlhallaMainPage" ContentTemplate="{DataTemplate brawlhalla:BrawlHallaMainPage}" />
 
     </TabBar>

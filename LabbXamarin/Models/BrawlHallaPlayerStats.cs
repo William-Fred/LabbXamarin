@@ -17,8 +17,6 @@ namespace LabbXamarin.Models
         public string damagebomb { get; set; }
         public List<PlayerLegends> legends { get; set; }
 
-        public float winRatio { get; set; }
-
 
 
     }

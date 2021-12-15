@@ -1,16 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LabbXamarin.Views.BrawlHallaViews.LegendsDetailsPage">
-    <ContentPage.Content>
+             x:Class="LabbXamarin.Views.BrawlHallaViews.LegendsDetailsPage"
+             xmlns:local="clr-namespace:LabbXamarin"
+             xmlns:local1="clr-namespace:LabbXamarin.Models"
+             Title="{Binding Title}">
+
+
+    <Grid BackgroundColor="{StaticResource Background}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
         <StackLayout>
-            <Label x:Name="name" Text="{Binding legend_name_key}"></Label>
-            <Label x:Name="wins" Text="{Binding wins}"></Label>
-            <Label x:Name="games" Text="{Binding wins}"></Label>
-            <Label x:Name="damageDealt" Text="{Binding damagedealt}"></Label>
-            <Label x:Name="damageTaken" Text="{Binding damagetaken}"></Label>
-            <Label x:Name="kos" Text="{Binding kos}"></Label>
-            
+            <ContentView>
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Image x:Name="imageLegend"
+                           HeightRequest="400"
+                           WidthRequest="500"
+                           ></Image>
+                </StackLayout>
+            </ContentView>
         </StackLayout>
-    </ContentPage.Content>
+        
+        <StackLayout BackgroundColor="{StaticResource Background}"
+                    Grid.Row="1"
+                     VerticalOptions="CenterAndExpand">
+
+                <StackLayout HorizontalOptions="Center"
+                             Margin="0,30,0,0">
+                    <Label x:Name="name" 
+                           Text="{Binding legend_name_key}"
+                           TextTransform="Uppercase"
+                           FontSize="20"
+                           TextColor="#fff"></Label>
+                    
+                    <Label x:Name="wins" 
+                           Text="{Binding wins}"></Label>
+                    
+                    <Label x:Name="games" 
+                           Text="{Binding wins, StringFormat='Games: {0}'}"></Label>
+                    <Label x:Name="damageDealt" 
+                           Text="{Binding damagedealt, StringFormat='Damage dealt: {0}'}"></Label>
+                    <Label x:Name="damageTaken" 
+                           Text="{Binding damagetaken}"></Label>
+                    <Label x:Name="kos" 
+                           Text="{Binding kos}"></Label>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
 </ContentPage>

@@ -9,37 +9,79 @@
     <ContentPage.BindingContext>
         <vm:BrawHallaPlayerStatsViewModel />
     </ContentPage.BindingContext>
-    
-    <ContentPage.Content>
-        <StackLayout>
 
-            <StackLayout>
-                
-            </StackLayout>
+
+    <Grid BackgroundColor="{StaticResource Background}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="Fill">
+            <ContentView VerticalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="{StaticResource Primary}" WidthRequest="200">
+                    <Image Source="playerStatsLogoX.png"
+                           HeightRequest="175"></Image>
+                </StackLayout>
+            </ContentView>
+        </StackLayout>
+
+
+        <StackLayout Grid.Row="1">
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
-                <Frame>
+                <Frame
+                    HeightRequest="40"
+                    CornerRadius="10"
+                     Margin="10,10,10,10"
+                    BackgroundColor="{StaticResource Primary}">
                     <Entry 
-                   x:Name="brawlHallaId_entry"
-                   BackgroundColor="#2c3e50"
-                   Placeholder="brawlhalla id"
-                   TextColor="White"
-                   Keyboard="Numeric"
-                   Completed="brawlHallaId_entry_CompletedAsync"
-                   PlaceholderColor="Wheat"></Entry>
+                        HeightRequest="40"
+                       x:Name="brawlHallaId_entry"
+                       Placeholder="Type in your brawlhalla id.."
+                       TextColor="#fff"
+                       Keyboard="Numeric"
+                       Completed="brawlHallaId_entry_CompletedAsync"
+                       PlaceholderColor="{StaticResource Accent}"></Entry>
                 </Frame>
             </StackLayout>
-            <StackLayout>
-                <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="{StaticResource Background}"></ActivityIndicator>
-                <Label Text="{Binding player.name}"></Label>
-                <Label Text="{Binding player.brawlhalla_id}"></Label>
-                <Label Text="{Binding player.games}"></Label>
-                <Label Text="{Binding player.wins}"></Label>
-                <Label Text="{Binding player.winRatio}"></Label>
-                <Label Text="{Binding player.level}"></Label>
-                <Label Text="{Binding player.xp_percentage}"></Label>
-                <Button x:Name="openModalLegends" Text="show legends" Clicked="openModalLegends_Clicked"></Button>
-            </StackLayout>
-            
+            <Frame BackgroundColor="{StaticResource Accent}"
+                   BorderColor="{StaticResource Primary}"
+                   Margin="10,0,10,100"
+                   CornerRadius="10">
+                <StackLayout HorizontalOptions="Center"
+                         Margin="10,0,10,0"
+                         WidthRequest="200">
+                    <ActivityIndicator IsRunning="{Binding IsBusy}" 
+                                       IsVisible="{Binding IsBusy}" 
+                                       Color="{StaticResource Background}"></ActivityIndicator>
+                    <Label TextColor="#333" 
+                           HorizontalTextAlignment="Center"
+                           Text="{Binding player.name}"
+                           TextDecorations="Underline"
+                           FontSize="20"></Label>
+                    <Label HorizontalTextAlignment="Center"
+                           TextColor="#333"
+                           Text="{Binding player.brawlhalla_id}"></Label>
+                    <Label Text="{Binding player.games, StringFormat='Games: {0}'}"
+                           HorizontalTextAlignment="Center"
+                            TextColor="#333"
+                           ></Label>
+                    <Label Text="{Binding player.wins, StringFormat='Wins: {0}'}"
+                           HorizontalTextAlignment="Center"
+                            TextColor="#333"></Label>
+                    <Label Text="{Binding player.level,StringFormat='Level: {0}'}" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="#333"></Label>
+                    <Label Text="{Binding player.xp_percentage}"
+                           HorizontalTextAlignment="Center"
+                            TextColor="#333"></Label>
+                    <Button x:Name="openModalLegends" 
+                        Text="show legends" 
+                        Clicked="openModalLegends_Clicked"
+                        BorderColor="{StaticResource Primary}"></Button>
+                </StackLayout>
+            </Frame>
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

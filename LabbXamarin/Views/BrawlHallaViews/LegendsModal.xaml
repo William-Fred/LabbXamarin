@@ -3,15 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LabbXamarin.Views.BrawlHallaViews.LegendsModal">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <ListView x:Name="legendsList" ItemTapped="legendsList_ItemTappedAsync">
+        <StackLayout BackgroundColor="{StaticResource Background}"
+                     Margin="1">
+            <ListView x:Name="legendsList" 
+                      ItemTapped="legendsList_ItemTappedAsync"
+                      Margin="10">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label Text="{Binding legend_name_key}"></Label>
+                            <Label Text="{Binding legend_name_key}"
+                                   TextColor="#fff"
+                                   TextTransform="Uppercase"></Label>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

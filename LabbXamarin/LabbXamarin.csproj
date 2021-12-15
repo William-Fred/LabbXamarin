@@ -6,9 +6,44 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\ada.png" />
+    <None Remove="Images\Asuri.png" />
+    <None Remove="Images\Azoth.png" />
+    <None Remove="Images\barraza.png" />
+    <None Remove="Images\Bodvar.png" />
+    <None Remove="Images\Brynn.png" />
+    <None Remove="Images\Cassidy.png" />
+    <None Remove="Images\Diana.png" />
+    <None Remove="Images\Ember.png" />
+    <None Remove="Images\Gnash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="Images\Asuri.png" />
+    <ApplicationDefinition Include="Images\Azoth.png" />
+    <EmbeddedResource Include="Images\ada.png" />
+    <EmbeddedResource Include="Images\barraza.png" />
+    <EmbeddedResource Include="Images\Bodvar.png" />
+    <EmbeddedResource Include="Images\Brynn.png" />
+    <EmbeddedResource Include="Images\Diana.png" />
+    <EmbeddedResource Include="Images\Ember.png" />
+    <EmbeddedResource Include="Images\Gnash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v11.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Cassidy.png" />
   </ItemGroup>
 
   <ItemGroup>

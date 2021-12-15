@@ -16,6 +16,7 @@ namespace LabbXamarin.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
         private string apiKey = "S2BJOY1UVBWYITJ13CYF";
+
         public BrawlHallaPlayerStats player { get; set; } = new BrawlHallaPlayerStats();
         public bool IsBusy { get; set; }
         
@@ -35,7 +36,6 @@ namespace LabbXamarin.ViewModels
             {
                 string playerContent = await response.Content.ReadAsStringAsync();
                 player = JsonConvert.DeserializeObject<BrawlHallaPlayerStats>(playerContent);
-                player.winRatio = player.wins / player.games;
                 RaisePropertyChanged("player");
             }
             else
@@ -44,9 +44,10 @@ namespace LabbXamarin.ViewModels
             }
             IsBusy = false;
             RaisePropertyChanged("IsBusy");
-
+            player.legends.Sort();
+            //BrandViewList = new ObservableCollection<BrandView>(BrandViewList.OrderBy(i => i.Manufacturer).ToList());
         }
-
+        
         private void RaisePropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)

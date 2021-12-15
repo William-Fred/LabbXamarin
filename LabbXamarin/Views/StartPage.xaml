@@ -25,7 +25,9 @@
                            BackgroundColor="{StaticResource Primary}"
                            >
                         <Image Source="brawlhallaLogo.jpg" 
-                           VerticalOptions="Center">
+                           VerticalOptions="Center"
+                               HeightRequest="180"
+                               WidthRequest="190">
                         </Image>
                     </Frame>
                 </ContentView>
@@ -50,14 +52,43 @@
                         BorderWidth="1"
                         BorderColor="{StaticResource Accent}"
                         TextColor="White"></Button>
-            </StackLayout>
-        </ScrollView>
-        <ScrollView Grid.Row="2">
-            <StackLayout>
-                <Frame>
-                    <Image Source="WebBanner1v1map.png" VerticalOptions="Center"></Image>
-                </Frame>
-                <Label Text="hej"></Label>
+                <StackLayout>
+                    <Frame BackgroundColor="{StaticResource Accent}" Margin="5">
+                        <StackLayout>
+                            <Label FontSize="Title" 
+                                   FontAttributes="Italic"
+                                   TextColor="#333">BRAWLHALLA X STREET FIGHTER ARE READY TO FIGHT! – PATCH 6.01</Label>
+                            <Image Source="WebBanner1v1map.png" VerticalOptions="Center"></Image>
+
+                            <Label FontSize="18"
+                                   TextColor="{StaticResource Background}"
+                                   Text=" Choose your character as new challengers Ryu, Chun-Li, and Akuma from Capcom's Street Fighter ready for battle in Brawlhalla! The newest Epic Crossovers feature custom Signature effects with VO lines for the first time ever, two new Weapon Skins each, unique lock-in animations, 
+                                   and dedicated Roster spots. The event also brings a new game mode featured as the Brawl of the Week – Street Brawl, a new 1v1 competitive Map, Satsui no Hado Emote, Kapukon Yu Podium, Knockout KO Effect, and new Avatars. Follow the Satsui no Hado symbol in Mallhalla to discover all the Street Fighter Crossover items! Munin's price has also been reduced to 5400 Gold. This update also includes a new feature: Rematch! Players now can rematch opponents in Ranked 1v1 and Ranked 2v2 games. The drop shadows Test Feature also graduated into all queues.
+                                   Additionally, we made a few game improvements, bug fixes, and updated the free-to-play Legend rotation. Claim the Halloween Bundle now with Amazon Prime Gaming!
+                                   To catch the latest Brawlhalla news and content, be sure to follow us on Twitter, Twitch, Facebook, YouTube, Instagram and Discord!"></Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                <StackLayout>
+                    <Frame BackgroundColor="{StaticResource Accent}" Margin="5">
+                        <StackLayout>
+                            <Label FontSize="Title" 
+                                   FontAttributes="Italic"
+                                   TextColor="#333">Cody Travis Wins the Brawlhalla World Championship 2021</Label>
+                            <Image Source="NAVresults.png" VerticalOptions="Center"></Image>
+
+                            <Label FontSize="18"
+                                   TextColor="{StaticResource Background}"
+                                   Text="North America BCX Singles has concluded with incredibly exciting results! From the get go, many of North America's shining new stars performed remarkably in the spotlight. 
+                                   Luna surprised everyone with their destructive run through the bracket, taking down Pugsy, Phazon and Snowy to make it to the Winners Semi Final. On the other side of the bracket was Java, eliminating megD and taking down Boomie in a shocking game five result. He too made it to the Winners Semi Final after knocking STING RAY into the lower bracket."></Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Copyright @2021 Fredsoft"
+                           TextColor="#fff"
+                           FontAttributes="Italic"></Label>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </Grid>
